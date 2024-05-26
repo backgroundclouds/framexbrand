@@ -1,0 +1,278 @@
+/*
+=====================
+CSS Table of Conttent 
+=====================
+
+/*
+------------------------
+01. All Variable
+--------------------------
+*/
+
+:root {
+    --font-sans:'Poppins', sans-serif;
+    --dark-800:#101729f2;
+    --gray-200:#A5ABAB;
+    --gray-300:#E7F5F5;
+    --green-500:#5083f9;
+
+}
+html {
+    scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+font-family:var(--font-sans);
+line-height: 1.2;
+color: var(--dark-800);
+}
+
+
+
+/*
+------------------------  
+ 01.  Header Css
+--------------------------
+*/
+  .full-menu-open {
+    opacity: 100%;
+    visibility: visible;
+    transition:500ms;
+    left: 0!important;
+    width: 100%;
+}
+
+body.full-menu-open {
+    overflow: hidden;
+}
+
+.search-toggle-open .full-search-bar{
+    opacity: 100%;
+    visibility: visible;
+    left: 0;
+}
+.full-search-bar{
+    transition: .5s;
+}
+
+body.search-toggle-open {
+    overflow: hidden;
+}
+
+.typed-cursor{
+    color: var(--green-500);
+}
+
+/* Latest Post CSS */
+
+
+.card-style-2 .card-item:last-child {
+ 
+    border-right: 0;
+}
+.card-style-3 .card-item:last-child{
+   
+    border-right: 0;
+
+}
+
+.card-style-4 .card-item:last-child{
+   
+    border-right: 0;
+
+}
+
+
+.card-style-5 .card-item:last-child{
+   
+    border-right: 0;
+
+}
+
+
+
+.list-tag li:last-child {
+    border: none;
+}
+
+.footer-social li:last-child{
+    border: none;
+
+}
+
+
+.slick-slider {
+    margin:0 -15px;
+}
+
+.slick-slider:last-child {
+    margin:0;
+}
+
+.slick-slide {
+    text-align:center;
+    margin-right:15px;
+    margin-left:15px;
+}
+
+
+/* Membership CSS */
+
+.hide{
+    display: none;
+}
+
+.active {
+    background: var(--dark-800);
+    color: white;
+}
+
+.badge-box:before {
+    width: 0;
+    height: 0;
+    border-width: 25px 14px 27px 24px;
+    border-color: transparent transparent transparent var(--green-500);
+    border-style: solid;
+    position: absolute;
+    content: "";
+    top: 0px;
+    right: -38px;
+}
+
+
+
+
+
+
+.main-card-box .card-images img
+{ 
+max-height: 550px;
+object-fit: cover;
+aspect-ratio: 1/ 1;
+
+}
+
+.main-card-box {
+
+    border-left: 1px solid; 
+
+}
+
+.main-card-box, .card-item {
+    border-color: rgba(101, 101, 101, 0.4)!important;
+}
+
+.dark .main-card-box, .dark .card-item {
+    border-color: var(--green-500)!important;
+}
+
+
+@media  (min-width: 1200px){
+.main-card-box >.card-item:nth-child(3n+1),
+.main-card-box >.card-item:nth-child(3n+2),
+.main-card-box >.card-item:nth-child(3n+3)
+{ 
+ grid-column: span 4!important;
+ border-right: 1px solid; 
+ border-bottom: 1px solid; 
+
+}
+
+.main-card-box >.card-item:nth-of-type(7n+7),
+.main-card-box >.card-item:nth-of-type(7n+6),
+.main-card-box >.card-item:nth-of-type(7n+5),
+.main-card-box >.card-item:nth-of-type(7n+4)
+{ 
+ grid-column: span 3!important;
+ border-right: 1px solid; 
+ border-bottom: 1px solid; 
+
+}
+
+  
+}
+
+
+@media screen and (max-width: 1200px) {
+   
+.main-card-box >.card-item:nth-child(2n+1),
+.main-card-box >.card-item:nth-child(2n+2)
+{ 
+ grid-column: span 6!important;
+ border-right: transparent; 
+ border-bottom: 1px solid transparent; 
+
+}
+
+
+section.latest-post-area .section-title {
+    margin-bottom: 60px;
+
+    
+}
+
+.page-title {
+    margin-bottom: 60px;
+
+}  
+
+.main-card-box >.card-item:nth-of-type(5n+5),
+.main-card-box >.card-item:nth-of-type(5n+4),
+.main-card-box >.card-item:nth-of-type(5n+3)
+{ 
+ grid-column: span 4!important;
+ border-right: transparent; 
+ border-bottom:transparent; 
+ 
+}
+.main-card-box {
+    gap: 28px;
+    border-left: transparent; 
+}
+.card-item {
+    padding: 0;
+}
+
+
+    
+}
+
+@media screen and (max-width:1024px) {
+   
+    .main-card-box >.card-item:nth-of-type(5n+5),
+    .main-card-box >.card-item:nth-of-type(5n+4),
+    .main-card-box >.card-item:nth-of-type(5n+3)
+    { 
+     grid-column: span 6!important; 
+     
+    
+    }
+}
+
+@media screen and (max-width: 768px) {
+ .main-card-box >.card-item:nth-child(1n+1)
+{ 
+ grid-column: span 12!important;
+
+} 
+}
+
+.related-area .card-images img {
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+
+ .dark .gh-content strong{
+
+    color: white;
+ }
+
+
+ 

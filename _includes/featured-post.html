@@ -1,0 +1,55 @@
+<!--  ====================== Featured Post Area Start =============================  -->
+<section class="featured-post-area border-y border-gray-400 dark:border-green-500 border-opacity-[40%] ">
+   <div class="container">
+      <!-- Loop through all posts -->
+      {% for post in site.posts %}
+      {% if post.featured %}
+      <div class="grid lg:grid-cols-2 flex-col gap-10 lg:gap-0 ">
+         <div class="flex-col lg:border-r border-gray-400 dark:border-green-500 border-opacity-[40%] lg:p-16 pt-10 ">
+            <div class="card-1-images h-full">
+               <a href="{{post.url}}">
+               <img class="w-full h-full object-cover" src="{{post.post_image}}" alt="images">
+               </a>
+            </div>
+         </div>
+         <div class="flex-col lg:py-16 lg:pl-16 pb-10">
+            <div class="card-1-content">
+               <div class="card-top flex items-center gap-10">
+                  <div class="tag-box ">
+                     {% for category in post.categories limit:1 %}
+                     <a class="flex items-center gap-4 hover:text-green-500 duration-500  uppercase" href="{{'/category/' | relative_url}}{{ category | slugify }}">
+                     {% if post.post_featured_icon %}
+                     <img class="w-7 h-7" src="{{post.post_featured_icon}}" alt="{{page.title}}">
+                     {% endif %}
+                     {{category | capitalize }}
+                     {% endfor %}
+                     </a>
+                  </div>
+                  <div class="point-box flex">
+                     <span>
+                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <circle cx="4" cy="4" r="4" fill="#5083f9"/>
+                        </svg>
+                     </span>
+                  </div>
+                  <div class="date-box uppercase">
+                     <p>{{post.date  | date: "%-d %B %Y"}}</p>
+                  </div>
+               </div>
+               <div class="content-main-box mt-7 flex flex-col gap-7">
+                  <div class="card-1-content flex flex-col gap-7">
+                     <h2 class="lg:text-7xl md:text-6xl text-5xl font-semibold dark:text-white "> <a class="dark:hover:text-green-500 hover:underline duration-500 decoration-[3px] uppercase" href="{{post.url}}">{{ post.title }}</a>  </h2>
+                     <p>The was know finger. For or of however to in for instead needs text back many of acting was a it that founder, continues that the can cleaning have clarinet</p>
+                     <div class="button-box">
+                        <a  class="inline-block font-medium uppercase dark:hover:text-green-500 hover:underline duration-500" href="{{post.url}}">read more</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      {% endif %}
+      {% endfor %}
+   </div>
+</section>
+<!--  ====================== Featured Post Area End =============================  -->

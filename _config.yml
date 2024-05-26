@@ -1,0 +1,95 @@
+ 
+title: "Frame x Brand"
+email: "josh@jpax.tv"
+description: "Blueblog is a responsive Jekyll template for your business website"
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: parkholer
+github_username:  backgroundclouds
+
+
+url: "https://jekyll-blueblog.netlify.app/" 
+keywords: "jekyll, minimal jekyll, jekyll theme, responsive jekyll, seo friendly blog, super fast blog, responsive"
+facebook_url: https://facebook.com/themeix
+twitter_url: https://twitter.com/Parkholer
+linkedin_url: https://www.linkedin.com/in/jptvmedia
+instagram_url: https://instagram.com/jptv.media
+discord_url: http://discord.com/
+
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-paginate-v2
+  - jekyll-archives
+  - jekyll-seo-tag
+
+ # Site configuration for the Jekyll 2 Pagination Gem
+pagination:
+  enabled: true
+  debug: true
+  collection: 'posts'
+  per_page: 7
+  permalink: '/pages/:num/' # Pages are simple html files 
+  title: ':title - page :num'
+  limit: 7
+  sort_field: 'date'
+  sort_reverse: true
+  category: 'posts'
+  tag: ''
+  locale: '' 
+  trail: 
+    before: 2
+    after: 
+  extension: 'html'
+  indexpage: 'index'
+
+autopages:
+  enabled: true
+  categories: 
+    layouts: 
+      - 'category.html'
+    title: 'Category -  :cat'
+    permalink: '/category/:cat'
+  collections:
+    layouts: 
+      - 'category.html'
+    title: ' :coll' # :coll is replaced by the collection name
+    permalink: '/:coll/'
+    
+  
+  tags:
+    layouts: 
+      - 'tag.html'
+    title: 'Tag - :tag' # :tag is replaced by the tag name
+    permalink: '/tag/:tag'  
+      
+tag_page_layout: category
+tag_page_dir: tag
+tag_permalink_style: pretty
+
+jekyll-archives:
+  enabled: all
+  layout: category
+  permalinks:
+    category: '/category/:name/'
+ 
+collections:
+  authors:
+    output: true
+    permalink: /author/:path/
+  events:
+    output: true
+    permalink: /event/:path/
+  podcasts:
+    output: true
+    permalink: /podcast/:path/
+  videos:
+    output: true
+    permalink: /video/:path/
+    
+feed:
+  collections:
+    posts:
+      path: "/index.xml"

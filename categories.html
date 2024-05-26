@@ -1,0 +1,43 @@
+---
+layout: default
+title: Categories
+permalink: /categories
+
+---
+
+<!--  ====================== Page Title Start =============================  -->
+<section class="page-title pt-20">
+  <div class="container">
+      <div class="page-title-main-box max-w-[822px] m-auto text-center">
+          <h2 class="text-5xl font-semibold uppercase dark:text-white ">{{page.title}}</h2>
+          <p class="mt-5">
+              Compensation of such point her morning with she consider they of that, but sighed. As small such for in outlines with and it contribution morals.
+          </p>
+      </div>
+  </div>
+</section>
+<!--  ====================== Page Title End =============================  -->
+
+    <!--  ====================== Tags Area Start =============================  -->
+    <section class="tags-area pt-16 pb-20">
+      <div class="container">
+          <div class="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10">
+          
+        {% for category in site.data.categories %}
+        {% assign cat = category.name %}
+        {% assign posts = site.posts | where: "categories", cat %}
+        {% if posts.size > 0 %}
+         <div class="tags-item">
+          <a  class="hover:border-green-500 block py-5 text-center border-r  duration-500 border-gray-400 border-opacity-[40%] dark:border-green-500 border-l bg-opacity-[5%]  dark:text-white hover:bg-green-500 bg-green-500 uppercase lg:text-2xl text-xl hover:text-white font-semibold" href="{{'/category/' | relative_url}}{{category.slug}}">{{category.name}}<p class=" text-base mt-1">
+            {{posts.size}} {% if posts.size == 1 %}Post {% else %}Posts{% endif %}
+          </p></a>
+      </div>
+
+
+        {% endif %}
+        {% endfor %}
+          </div>
+      </div>
+  </section>
+  <!--  ====================== Tags Area End =============================  -->
+

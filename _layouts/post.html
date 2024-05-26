@@ -1,0 +1,189 @@
+---
+layout: default
+---
+<!--  ====================== Post Details Area Start =============================  -->
+<div class="post-content-area pt-20">
+   <div class="gh-canvas">
+      <div class="topbar-meta border-t border-gray-400 dark:border-green-500 border-opacity-[40%] pt-10">
+         <div class="flex items-center md:gap-10 gap-3">
+            <div class="flex-col">
+               {% for category in page.categories limit:1 %}
+               <a class="flex items-center gap-4 hover:text-green-500 duration-500  uppercase" href="{{'/category/' | relative_url}}{{ category | slugify }}">
+               {% if page.post_featured_icon %}
+               <img class="w-7 h-7" src="{{page.post_featured_icon}}" alt="{{page.title}}">
+               {% endif %}
+               {{category | capitalize }}
+               {% endfor %}
+               </a>
+            </div>
+            <div class="flex-col">
+               <p class="bg-green-500 w-2 h-2 rounded-full"></p>
+            </div>
+            <div class="flex-col">
+               <div class="date-info">
+                  <p class="uppercase"> {{page.date  | date: "%-d %B %Y"}} </p>
+               </div>
+            </div>
+            <div class="flex-col">
+               <p class="bg-green-500 w-2 h-2 rounded-full"></p>
+            </div>
+            <div class="flex-col">
+               <div class="reading-time">
+                  <p class="uppercase"> {% capture words %}
+                     {{ content | number_of_words | minus: 180 }}
+                     {% endcapture %}
+                     {% unless words contains '-' %}
+                     {{ words | plus: 150 | divided_by: 150 | append: ' minutes to read' }}
+                     {% endunless %} 
+                  </p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="top-title mt-7">
+         <h2 class="uppercase xl:text-7xl lg:text-6xl md:text-5xl text-4xl dark:text-white font-semibold"> {{page.title}} </h2>
+      </div>
+      <div class="entyr-content-area pt-10  mt-10 border-t border-gray-400 dark:border-green-500 border-opacity-[40%]">
+         {% if page.featured_image %}
+         <div class="featured-image mb-10">
+            <img class="w-full" src="{{page.featured_image}}" alt="{{page.title}}">
+         </div>
+         {% endif %}
+         <div class="entry-content gh-content mt-10">
+            {{page.content}}
+         </div>
+      </div>
+   </div>
+</div>
+<!--  ====================== Post Details Area End =============================  -->
+<!--  ====================== Post Details Bottom Start =============================  -->
+<div class="post-details-bottom lg:pt-32 pt-20">
+   <div class="container">
+      <div class="share-social-media">
+         <h4 class="dark:text-white uppercase font-semibold text-2xl text-center">Share This post:</h4>
+         <div class="social-media-link mt-6 border-b border-gray-400 dark:border-green-500 border-opacity-[40%] pb-16 mb-16">
+            <ul class="flex gap-6 flex-wrap justify-center">
+               <li class="facebook">
+                  <a class="hover:-translate-y-2 inline-block duration-500" href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ site.baseurl }}{{ page.url }}"
+                     onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;">
+                     <svg width="44" height="45" viewBox="0 0 44 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="44" height="44" transform="translate(0 0.527588)" fill="#1A6ED8"/>
+                        <path d="M24 24.0276H26.5L27.5 20.0276H24V18.0276C24 16.9976 24 16.0276 26 16.0276H27.5V12.6676C27.174 12.6246 25.943 12.5276 24.643 12.5276C21.928 12.5276 20 14.1846 20 17.2276V20.0276H17V24.0276H20V32.5276H24V24.0276Z" fill="#F8FFFF"/>
+                     </svg>
+                  </a>
+               </li>
+               <li class="twitter">
+                  <a class="hover:-translate-y-2 inline-block duration-500" href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ site.baseurl }}{{ page.url }}"
+                     onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;">
+                     <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M44.7002 0.0919924H0.700226V44.092H44.7002V0.0919924Z" fill="black"/>
+                        <path d="M28.9037 12.342H32.2117L24.9847 20.602L33.4867 31.842H26.8297L21.6157 25.025L15.6497 31.842H12.3397L20.0697 23.007L11.9137 12.342H18.7397L23.4527 18.573L28.9037 12.342ZM27.7427 29.862H29.5757L17.7437 14.218H15.7767L27.7427 29.862Z" fill="white"/>
+                        </svg>
+                        
+                  </a>
+               </li>
+               <li class="pnistar">
+                  <a class="hover:-translate-y-2 inline-block duration-500" href="https://www.pinterest.com/pin/create/button/?url={{ site.url }}{{ site.baseurl }}{{ page.url }}"
+                     onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;">
+                     <svg width="44" height="45" viewBox="0 0 44 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="44" height="44" transform="translate(0 0.527588)" fill="#B7081B"/>
+                        <g clip-path="url(#clip0_50_1626)">
+                           <path d="M20.3405 26.4C19.7093 29.7048 18.9401 32.8728 16.6589 34.5276C15.9557 29.5332 17.6921 25.7832 18.4997 21.8016C17.1233 19.4856 18.6653 14.8272 21.5657 15.9756C25.1357 17.3868 18.4745 24.582 22.9457 25.482C27.6149 26.4192 29.5205 17.382 26.6249 14.4432C22.4429 10.1976 14.4497 14.3436 15.4337 20.4216C15.6725 21.9072 17.2073 22.3572 16.0469 24.408C13.3697 23.8152 12.5705 21.7032 12.6737 18.888C12.8393 14.28 16.8125 11.0556 20.7989 10.608C25.8401 10.0428 30.5717 12.4596 31.2257 17.2008C31.9613 22.554 28.9505 28.3524 23.5589 27.9348C22.0973 27.8208 21.4853 27.096 20.3405 26.4Z" fill="#F8FFFF"/>
+                        </g>
+                        <defs>
+                           <clipPath id="clip0_50_1626">
+                              <rect width="24" height="24" fill="white" transform="translate(10 10.5276)"/>
+                           </clipPath>
+                        </defs>
+                     </svg>
+                  </a>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <div class="tags-button border-b border-gray-400 dark:border-green-500 border-opacity-[40%] pb-16">
+         <h4 class="dark:text-white uppercase font-semibold text-2xl text-center">Tags</h4>
+         <ul class="mt-6 flex gap-6 flex-wrap justify-center">
+            {% for tag in site.tags limit: 7 %}
+            <li>
+               <a  aria-label="{{tag[0] | capitalize}}" class="uppercase hover:text-green-500 duration-500" href="{{'/tag/'}}{{tag[0] | slugify}}">{{tag[0] | capitalize}}</a>
+            </li>
+            {% endfor %}
+         </ul>
+      </div>
+   </div>
+</div>
+<!--  ====================== Post Details Bottom End =============================  -->
+<!--  ====================== Author Information Start =============================  -->
+<div class="author-information pt-16">
+   <div class="container">
+      <div class="author-information-box max-w-[536px] m-auto text-center">
+         <div class="author-images">
+            <img  class="w-16 h-16 rounded-full m-auto object-cover object-top" src="{{page.author_images}}" alt="{{page.author_name}}">
+         </div>
+         <div class="author-name mt-4">
+            <p class="text-xl font-medium  duration-500 dark:text-white">{{page.author_name}}</p>
+         </div>
+         <div class="author-title">
+            <p class="text-sm mt-1">{{page.author_post}}</p>
+         </div>
+         <p class="mt-5">{{page.author_bio}} </p>
+      </div>
+   </div>
+</div>
+<!--  ====================== Author Information End =============================  -->
+<!--  ====================== Previous Post Start =============================  -->
+<div class="previous-post-box pt-16">
+   <div class="container">
+      <div class="md:grid lg:grid-cols-2 lg:gap-20 grid-cols-1 gap-10 my-7  border-y border-gray-400 dark:border-green-500 border-opacity-[40%] py-10">
+         <div class="flex-col max-w-[400px] m-auto dark:text-white">
+            {% if page.previous.url %}
+            <a class="group" href="{{page.previous.url}}">
+               <h2 class="dark:text-white group-hover:text-green-500 duration-500 lg:text-2xl text-xl font-semibold uppercase text-right group-hover:underline">{{page.previous.title}}</h2>
+               <div class="flex items-center gap-4 mt-5 justify-end">
+                  <span>
+                     <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path class="group-hover:fill-green-500 duration-500 " fill-rule="evenodd" clip-rule="evenodd" d="M8.74992 2.36084L9.91659 3.52751L6.41659 7.02751L9.91659 10.5275L8.74992 11.6942L4.08325 7.02751L8.74992 2.36084Z" fill="#A5ABAB"/>
+                     </svg>
+                  </span>
+                  <p class="group-hover:text-green-500 duration-500  uppercase">Previous Post</p>
+               </div>
+            </a>
+            {% endif %}
+         </div>
+         <div class="flex-col max-w-[400px] m-auto dark:text-white">
+            {% if page.next.url %}
+            <a class="group" href="{{page.next.url}}">
+               <h2  class=" dark:text-white group-hover:text-green-500 duration-500 lg:text-2xl text-xl font-semibold uppercase text-left group-hover:underline">{{page.next.title}}</h2>
+               <div class="flex items-center gap-4 mt-5">
+                  <p class="uppercase group-hover:text-green-500 duration-500 ">Next Post</p>
+                  <span>
+                     <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path class="group-hover:fill-green-500 duration-500 " fill-rule="evenodd" clip-rule="evenodd" d="M1.75308 0.36084L6.41974 5.02751L1.75308 9.69417L0.583496 8.52751L4.08641 5.02751L0.583496 1.52751L1.75308 0.36084Z" fill="#A5ABAB"/>
+                     </svg>
+                  </span>
+               </div>
+            </a>
+            {% endif %}
+         </div>
+      </div>
+   </div>
+</div>
+<!--  ====================== Previous Post End =============================  -->
+<!--  ====================== Conversation Post Start =============================  -->
+<div class="conversation-area  py-16 mb-16">
+   <div class="container">
+      <div class="conversation-main-box max-w-[880px] m-auto">
+         <div class="grid grid-cols-2 border-b pb-6 mb-6 border-gray-400 dark:border-green-500 border-opacity-[40%]">
+            <div class="flex-col">
+               <h2 class="uppercase md:text-2xl text-xl font-semibold dark:text-white">Member discussion</h2>
+            </div>
+         </div>
+         {% include comments.html %}
+      </div>
+   </div>
+</div>
+<!--  ====================== Conversation Post End =============================  -->
+<!--  ====================== related  Area Start =============================  -->
+{% include related-post.html %}
+<!--  ====================== related  Area End =============================  -->

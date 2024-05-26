@@ -1,0 +1,8 @@
+<ul>
+    {% for link in site.data.navigation %}
+    <li class="nav-item">
+       <a class="dark:text-white text-dark-800  inline-block lg:text-7xl md:text-6xl text-5xl hover:underline dark:hover:text-green-500 decoration-[3px] duration-500 font-semibold uppercase"
+          href="{{link.url}}">{{link.text}}</a>
+    </li>
+    {% endfor %}
+ </ul>

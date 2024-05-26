@@ -1,0 +1,37 @@
+---
+layout: default
+title: Blog
+permalink: /blog
+cover_img: '/assets/images/blog/blog-img7.jpg'
+description: "In concept client effects, he long, the have it's it the blind into generally the there from you had it the reached term me." 
+pagination:
+    enabled: true
+---
+
+  {% assign posts = site.posts %}
+    <!--  ====================== Latest Post Area Start =============================  -->
+    <section class="latest-post-area  pt-16 border-t dark:border-green-500 border-opacity-[40%]  mt-16">
+      <div class="section-title text-center border-b border-gray-400 dark:border-green-500 border-opacity-[40%]  pb-16">
+         <div class="container">
+            <h2 class="lg:text-60 md:text-6xl text-5xl dark:text-gray-300 font-semibold uppercase">latest post</h2>
+         </div>
+      </div>
+      <div class="container">
+         <div class="main-card-box infinite-scroll  grid grid-cols-12 border-gray-400 dark:border-green-500 border-opacity-[40%]">
+            
+            
+        
+        
+        {% for post in paginator.posts %}
+           
+              {% include post-card.html %}
+           
+        {% endfor %}
+
+         </div>
+         
+         {% include pagination.html %}
+
+      </div>
+   </section>
+   <!--  ====================== Latest Post Area End =============================  -->

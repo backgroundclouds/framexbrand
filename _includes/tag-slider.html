@@ -1,0 +1,18 @@
+<!--  ====================== Tag Slider Area Start =============================  -->
+<div class="tag-slider-area  bg-green-500 lg:mt-32 mt-20 md:py-10 py-7">
+   <div class="tag-slider-main">
+      {% for tag in site.tags limit: 7 %}
+      <div class="tag-item !flex gap-7 items-center">
+         <a aria-label="{{tag[0] | capitalize}}" class="uppercase xl:text-60 lg:text-6xl md:text-5xl text-4xl  font-semibold text-white" href="{{'/tag/'}}{{tag[0] | slugify}}">{{tag[0] | capitalize}}</a>
+         <div class="tag-icon">
+            <span>
+               <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M18.5546 0.000469114C18.5495 0.174462 18.5469 0.349085 18.5467 0.524283C18.5466 0.348924 18.544 0.174151 18.5388 0L18.5546 0.000469114ZM18.5467 0.553305C18.5389 10.4921 10.4795 18.5467 0.538841 18.5467C0.358597 18.5467 0.178971 18.544 0 18.5388C0.000154791 18.5441 0.000311845 18.5493 0.00047116 18.5546C0.179286 18.5493 0.358755 18.5467 0.538841 18.5467C10.2988 18.5467 18.2453 26.3111 18.5384 36C18.544 35.9998 18.5495 35.9997 18.5551 35.9995C18.8429 26.4952 26.4952 18.8429 35.9995 18.5551L36 18.5383C26.3159 18.2454 18.5544 10.3066 18.5467 0.553305Z" fill="white"/>
+               </svg>
+            </span>
+         </div>
+      </div>
+      {% endfor %}
+   </div>
+</div>
+<!--  ====================== Tag Slider Area End =============================  -->

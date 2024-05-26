@@ -1,0 +1,41 @@
+---
+layout: default
+pagination:
+enabled: true
+---
+{% assign posts = paginator.posts %}
+<!--  ====================== Page Title Start =============================  -->
+<section class="page-title border-y mt-20 border-gray-400 dark:border-green-500 border-opacity-[40%] lg:p-16 py-10">
+   <div class="container">
+      <div class="max-w-[1000px]">
+         <div class="md:grid lg:grid-cols-12 flex flex-col    grid-cols-1 md:items-center gap-10">
+            <div class="col-span-8 xl:ml-16">
+               <div class="page-title-main-box max-w-[700px] m-auto ml-0">
+                  <h2 class="text-5xl font-semibold uppercase dark:text-white ">{{page.title}}</h2>
+                  <p class="mt-5 text-xl font-medium">
+                     {{posts.size}} {% if posts.size == 1 %} Post {% else %} Posts {% endif %}
+                  </p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+<!--  ====================== Page Title End =============================  -->
+<!--  ====================== Tag Area Start =============================  -->
+<section class="tag-area  lg:mb-32 mb-20">
+   <div class="container">
+      <div class="main-card-box blog-post-all  grid grid-cols-12 border-gray-400 dark:border-green-500 border-opacity-[40%]">
+         {% for post in paginator.posts %}
+         {% include post-card.html %}
+         {% endfor %}
+      </div>
+      <!--  ====================== Tag Area End =============================  -->
+      <!--  ====================== Load More Area Start =============================  -->
+      <div class="load-more-box load-more-btn mt-16 ">
+         {% include pagination.html %}
+      </div>
+      <!--  ====================== Load More Area End =============================  -->
+   </div>
+</section>
+<!--  ====================== Tag Area End =============================  -->

@@ -1,0 +1,14 @@
+#Please use the main menu items under the "text"
+
+#Please use the main menu items under the "text"
+
+- text: Home
+  url: /index.html
+- text: Membership
+  url: /membership.html
+- text: Categories
+  url: /categories.html
+- text: Subscribe
+  url: /subscribe.html
+- text: Contact
+  url: /contact.html

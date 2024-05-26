@@ -1,0 +1,21 @@
+         <!--  ====================== Latest Post Area Start =============================  -->
+         <section class="latest-post-area  pt-16 border-t dark:border-green-500 border-opacity-[40%]  mt-16">
+            <div class="section-title text-center border-b border-gray-400 dark:border-green-500 border-opacity-[40%]  pb-16">
+               <div class="container">
+                  <h2 class="lg:text-60 md:text-6xl text-5xl dark:text-gray-300 font-semibold uppercase">latest post</h2>
+               </div>
+            </div>
+            <div class="container">
+               <div class="main-card-box blog-post-all  grid grid-cols-12 border-gray-400 dark:border-green-500 border-opacity-[40%]">
+                  
+                  {% for post in site.posts limit:7 %}
+                      {% include post-card.html %}
+              {% endfor %}      
+               </div>
+               <nav class="page-navigation text-center  mt-16">
+                  <a href="{{'/blog' | relative_url}}" class=" uppercase  text-3xl font-medium dark:text-white dark:hover:text-green-500 hover:underline duration-500 loadmore">   load more</a>
+                </nav>
+              
+            </div>
+         </section>
+         <!--  ====================== Latest Post Area End =============================  -->

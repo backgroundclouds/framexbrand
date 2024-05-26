@@ -1,0 +1,42 @@
+<div class="related-area  lg:py-32 py-20">
+   <div class="container">
+      <div class="section-title border-b pb-6 mb-6 lg:mb-0  border-gray-400 dark:border-green-500 border-opacity-[40%]">
+         <h2 class="lg:text-5xl md:text-4xl text-3xl uppercase dark:text-white font-semibold"> related POSTS </h2>
+      </div>
+      <div class="grid lg:grid-cols-4 gap-6 lg:gap-0 sm:grid-cols-2 flex-col    lg:border-l border-gray-400 dark:border-green-500 border-opacity-[40%]">
+         {% assign cat = page.categories %}
+         {% assign posts = site.posts | where: 'categories', cat[0] %}
+         {% for post in posts %}
+         <div class="card-item   lg:p-16 lg:border-r border-gray-400 dark:border-green-500 border-opacity-[40%] lg:border-b">
+            <div class="card-images">
+               <a href="{{post.url}}"><img class="w-full  " src="{{post.post_image | relative_url }}" alt="{{post.title}}"></a>
+            </div>
+            <div class="main-content-box">
+               <div class="card-bottom flex items-center gap-4 mt-4">
+                  <div class="tag-box ">
+                     {% for category in post.categories limit:1  %}
+                     <a class="flex items-center gap-4 hover:text-green-500 duration-500  uppercase" href="{{'/category/' | relative_url }}{{category | slugify}}">
+                     {{category | capitalize}}
+                     </a>
+                     {% endfor %}
+                  </div>
+                  <div class="point-box flex">
+                     <span>
+                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <circle cx="4" cy="4" r="4" fill="#5083f9"></circle>
+                        </svg>
+                     </span>
+                  </div>
+                  <div class="date-box uppercase">
+                     <p> {{post.date  | date: "%-d %B %Y"}}</p>
+                  </div>
+               </div>
+               <div class="content-main-box mt-4 flex flex-col gap-6">
+                  <h2 class="md:text-3xl text-2xl font-semibold dark:text-white  uppercase "> <a class="dark:hover:text-green-500 hover:underline duration-500 decoration-[3px]" href="{{post.url}}"> {{post.title }}  </a></h2>
+               </div>
+            </div>
+         </div>
+         {% endfor %}
+      </div>
+   </div>
+</div>

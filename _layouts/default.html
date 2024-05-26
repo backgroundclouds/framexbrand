@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<head>
+   <!-- meta -->
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!--  Add Favicon -->
+   <link rel="icon" href="{{'/assets/images/favicon.ico' | relative_url}}">
+   {% seo %}
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+   <!-- gulp:css -->
+   <link rel="stylesheet" href="{{'/assets/css/app.min.css' | relative_url}}">
+   <link rel="stylesheet" href="{{'/assets/css/jykell.custom.css' | relative_url}}">
+   <!-- endgulp -->
+   <!-- font awwesome added for bluesky -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+   <style>
+      .social-link .fa-bluesky {
+        font-size: 36px;
+        width: 28px;
+        height: 26px;
+        display: inline-block;
+        vertical-align: middle;
+      }
+    </style>
+</head>
+<body class="full-menu full-search bg-white dark:bg-dark-800 dark:text-gray-100 font-inter font-normal leading-1.6 text-gray-400 text-base">
+   <div class="main-body">
+      {% include header.html %}
+      {{content}}
+      {% include footer.html %}
+      <!--=========== JS Add ==========-->
+      <!-- gulp:js -->
+      <!-- endgulp -->
+   </div>
+   <!-- gulp:js -->
+   <script src="{{'/assets/js/build.min.js' | relative_url}}"></script>
+   <script src="{{'/assets/js/simple-jekyll-search.min.js' | relative_url}}"></script>
+   <!-- endgulp -->
+   <script>
+      $('.infinite-scroll').infiniteScroll({
+          path: function path() {
+            var pageNumber = this.loadCount + 2;
+            return '/blog/pages/' + pageNumber + '/index.html';
+          },
+          append: '.post-item',
+          button: '.loadmore',
+          scrollThreshold: false
+      
+        });
+        // search 
+        var sjs = SimpleJekyllSearch({
+          searchInput: document.getElementById('search-input'),
+          resultsContainer: document.getElementById('results-container'),
+          json: '/search.json',
+          searchResultTemplate: '<div class="search-results"><a class="gh-search-item" href="{url}"><h5 class="search-post-title">{title}</h5></a>'
+        });
+   </script>
+</body>
+</html>
