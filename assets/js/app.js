@@ -104,7 +104,7 @@ JS Table of Conttent
 
 
     new Typed('#typed', {
-      strings: ['YOUR', 'MOUTH'],
+      strings: ['CREATIVE', 'COMMERCIAL', 'BRAND'],
       typeSpeed: 200,
       delaySpeed: 200,
       loop: true,

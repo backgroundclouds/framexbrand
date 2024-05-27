@@ -5,7 +5,8 @@ subtitle: "Why the decrease in work have NOTHING to do with the economy"
 description: Why the decrease in work has NOTHING to do with the economy. What the misconceptions at play are. What's relevant to know for people in Creative Advertising & Commercial Film Production.
 featured_image: "/assets/images/posts/Market-Shift-1/LiarMeme-v3-2 square.png"
 post_image: "/assets/images/posts/Market-Shift-1/LiarMeme-v3-2 square.png"
-categories: [agency, brand, film production]
+tags: agency
+categories: [agency, brand, production]
 excerpt: "
 Debunks the myth that the commercial slowdown is caused by the economy
 "

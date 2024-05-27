@@ -4,7 +4,8 @@ title: "Incentive Structure of Film"
 subtitle: Film, TV Movies, & Modern Cinema
 description: "What makes for successful television? What are the incentives for different platforms and the shows that run on them"
 post_image: "/assets/images/posts/incentive-film/IncentiveFilm4x.png"
-categories: film production
+tags: [production]
+categories: production
 excerpt: "If it looks like a Panavision, shoots like a Panavision, and hums like a Panavision, does that mean it produces motion pictures?"
 featured_image: "/assets/images/posts/incentive-film/IncentiveFilm4x.png"
 substack_link: https://open.substack.com/pub/jptv/p/incentive-structure-of-film?r=2a20hv&utm_campaign=post&utm_medium=web

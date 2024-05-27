@@ -5,7 +5,8 @@ subtitle: "Part II: Economies on Offer at Scale"
 description: Why Ad Agencies are systematically negotiating bad deals for themselves
 featured_image: "/assets/images/posts/Market-Shift-2/EconScale-v0-cropped.png"
 post_image: "/assets/images/posts/Market-Shift-2/EconScale-v0-cropped.png"
-categories: [agency, brand, film production]
+tags: agency
+categories: [agency, brand, production]
 excerpt: "
 This followup piece tackles why Ad Agencies are systematically negotiating bad deals for themselves, and by extension the vendors that they hire.
 "

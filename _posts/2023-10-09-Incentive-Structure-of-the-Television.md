@@ -5,7 +5,8 @@ subtitle: "Dollars, Screens, and Aesthetics: The Various Modes of TV"
 description: "What makes for successful television? What are the incentives for different platforms and the shows that run on them"
 featured_image: "/assets/images/posts/incentive-tv/incentive-tv.png"
 post_image: "/assets/images/posts/incentive-tv/incentive-tv.png"
-categories: [film production, agency, brand]
+tags: [production]
+categories: [production, agency, brand]
 excerpt: "Success in TV always boils down to viewership. Regardless of the platform—be it network television, premium, streaming, or other, value is determined by views. Incentives for the platform, the program creator, and advertisers, are always built around attention.
 <br>
 **Viewership => Sales**"

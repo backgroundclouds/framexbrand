@@ -4,7 +4,8 @@ title: "Suspension of Disbelief"
 subtitle: Subtextual Film Logic
 featured_image: "/assets/images/posts/suspension/height-of-reality-graph.png"
 post_image: "/assets/images/posts/suspension/height-of-reality-graph.png"
-categories: film production
+tags: [production]
+categories: production
 description: " Why is it called the suspension of disbelief? <br>
 And not the suspension of belief?<br>
 Is it because you have to suspend what you do believe– or what you don't?"

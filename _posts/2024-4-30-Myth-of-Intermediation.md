@@ -5,6 +5,7 @@ subtitle: "The paradox of The Holding Company: More shops, less share"
 description: The story of The Brand and The Advertising Agency across the era's 
 featured_image: "/assets/images/posts/myth/Title-Card-3.png"
 post_image: "/assets/images/posts/myth/Title-Card-3.png"
+tags: [brand]
 categories: [agency, brand]
 excerpt: "The issues with holding companies are not exclusive to the advertising sector. But they have arrived at a moment of crystallization."
 substack_link: https://jptv.substack.com/p/the-advertising-agency-and-the-myth
