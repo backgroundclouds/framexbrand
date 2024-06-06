@@ -16,7 +16,7 @@ substack_link: https://framebybrand.substack.com/p/the-ad-agency-market-shift
 
 This is Part II of a 3 part piece exploring the creative advertising market shift.
 
-**[Part I](https://jptv.substack.com/p/the-creative-advertising-market-shift)**debunks the myth that creative slowdown is caused by the economy.  
+**[Part I](https://jptv.substack.com/p/the-creative-advertising-market-shift)** debunks the myth that creative slowdown is caused by the economy.  
 **Part II** explores The Holding Company model and its role in gunking up creative.  
 **Part III** explores the limited leverage film production has in the pipeline, and what the industry should push for
 
